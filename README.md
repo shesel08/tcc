@@ -70,3 +70,13 @@ If you found this paper/code useful in your research, please consider citing:
   year = {2019},
 }
 ```
+
+# MID_TERM
+
+The notebook tcc_pouring_tutorial_aegean_main_mid_term.ipynb is present under notebooks/mid-term. Intel GPU seems to work but needed a changes to the files in the repo to use xpu instead of cuda as device. As repository was to be used as a library, used colab for running the notebook. 
+
+```
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+needs to be changes to 
+device = torch.device("xpu" if torch.xpu.is_available() else "cpu")
+```
